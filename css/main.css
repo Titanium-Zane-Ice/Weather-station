@@ -1,0 +1,85 @@
+/*---------------------------ROOT Style----------------------------*/
+:root {
+  /* Paper surfaces */
+  --tga-paper:       #F4ECD8;
+  --tga-vellum:      #FBF6E9;
+  --tga-vellum-2:    #EDE2C2;
+
+  /* Ink surfaces */
+  --tga-ink:         #16131F;
+  --tga-ink-2:       #221A2A;
+  --tga-ink-3:       #322642;
+
+  /* Text */
+  --tga-text:              #ffffff;
+  --tga-text-soft:         #5C4E3F;
+  --tga-text-faint:        #8C7A66;
+  --tga-text-invert:       #F4ECD8;
+  --tga-text-invert-soft:  #BDB098;
+
+  /* Rules / borders */
+  --tga-rule:        #D4C5A0;
+  --tga-rule-soft:   #E5D9B7;
+  --tga-rule-ink:    #3D324F;
+  /* Bronze — utility borders, frames */
+  --tga-bronze:      #8A5A3A;
+  /* Typography */
+  --tga-font-display: 'Cinzel', 'Trajan Pro', serif;
+  --tga-font-script:  'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+  --tga-font-body:    'Inter', system-ui, -apple-system, sans-serif;
+  --tga-font-mono:    'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+
+  /* Type scale */
+  --tga-fs-xs:   0.72rem;
+  --tga-fs-sm:   0.85rem;
+  --tga-fs-base: 1rem;
+  --tga-fs-md:   1.15rem;
+  --tga-fs-lg:   1.45rem;
+  --tga-fs-xl:   2rem;
+  --tga-fs-2xl:  2.75rem;
+  --tga-fs-3xl:  3.75rem;
+
+  --tga-track-display: 0.08em;
+  --tga-track-meta:    0.18em;
+
+  /* Spacing */
+  --tga-s-1: 4px;  --tga-s-2: 8px;  --tga-s-3: 12px; --tga-s-4: 16px;
+  --tga-s-5: 24px; --tga-s-6: 32px; --tga-s-7: 48px; --tga-s-8: 64px;
+  --tga-gutter: clamp(20px, 6vw, 80px);
+
+  /* Shadows */
+  --tga-shadow-card: 0 1px 0 #fff inset, 0 1px 2px rgba(26,20,16,.08), 0 8px 24px -8px rgba(26,20,16,.22);
+  --tga-shadow-lift: 0 1px 0 #fff inset, 0 2px 4px rgba(26,20,16,.10), 0 18px 40px -10px rgba(26,20,16,.30);
+  --tga-shadow-deep: 0 20px 60px -10px rgba(14,10,6,.55);
+  --tga-shadow-glow-gold: 0 0 0 1px rgba(184,134,42,.25), 0 12px 36px -10px rgba(184,134,42,.45);
+}
+/*---------------------------Main Style----------------------------*/
+body {
+    background-color: #00003F;
+}
+header {
+    background-color: rgb(0, 0, 120);
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    height: 72px;
+    padding: 20px;
+    text-align: left;
+    z-index: 100;
+    
+}
+h1, h2, h3, h4 {
+  font-family: var(--tga-font-display);
+  font-weight: 700;
+  color: var(--tga-text);
+  line-height: 1.1;
+  letter-spacing: var(--tga-track-display);
+}
+
+h1 { font-size: var(--tga-fs-2xl); font-weight: 900; }
+h2 { font-size: var(--tga-fs-xl); }
+h3 { font-size: var(--tga-fs-lg); }
+h4 { font-size: var(--tga-fs-md); }
+
+p { margin: 0 0 var(--tga-s-3); }
