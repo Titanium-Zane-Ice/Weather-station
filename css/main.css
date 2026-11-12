@@ -64,10 +64,11 @@ header {
     position: sticky;
     top: 0;
     height: 72px;
+    justify-content: space-between;
     padding: 20px;
     text-align: left;
     z-index: 100;
-    
+
 }
 h1, h2, h3, h4 {
   font-family: var(--tga-font-display);
