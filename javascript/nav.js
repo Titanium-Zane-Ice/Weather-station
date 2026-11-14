@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     btn.addEventListener('click', function() {
         var open = header.classList.toggle('nav-open');
-        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-expanded', String(open));
     });
 
     header.querySelectorAll('nav a').forEach(function (a) {

@@ -2,6 +2,7 @@
 :root {
   /* font colors */
   --tga-gold:         #b38022;
+  --tga-gold-bright:  #e3c16b;
   /* Paper surfaces */
   --tga-paper:       #F4ECD8;
   --tga-vellum:      #FBF6E9;
@@ -48,10 +49,10 @@ header {
     top: 0;
     height: 72px;
     justify-content: space-between;
-    padding: 20px;
+    padding: 0 var(--tga-gutter);
     text-align: left;
     z-index: 100;
-    margin: var(--tga-gold);
+    box-shadow: 0 2px 0 var(--tga-gold);
 
 }
 h1, h2, h3, h4 {
@@ -68,7 +69,10 @@ h1 {
 footer {
     background-color: #000000;
     text-align: center;
-    color: white;
+    color: #ffffff;
+    padding: 5px;
+    bottom: 0;
+
 }
 
 .brand {
@@ -120,4 +124,129 @@ nav ul li.active a,
 nav ul li.active > a {
   color: var(--tga-gold);
   border-color: var(--tga-gold);
+}
+em {
+    font-style: italic;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--tga-gold-bright);
+  border-radius: 2px;
+  transition: transform 0.25s var(--tga-ease), opacity 0.25s var(--tga-ease);
+}
+
+/* Animate three lines → × when nav is open */
+header.nav-open .nav-toggle span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+header.nav-open .nav-toggle span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+header.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+/* ── Responsive — tablet / mobile (≤ 768px) ────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Header becomes wrapping flex row */
+  header {
+    height: auto;
+    min-height: 60px;
+    flex-wrap: wrap;
+    padding: 14px var(--tga-gutter);
+    gap: 0;
+    align-items: center;
+  }
+
+  /* Hamburger visible */
+  .nav-toggle {
+    display: flex;
+    margin-left: auto;
+  }
+
+  /* Nav takes full width, collapsed by default */
+  nav {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s var(--tga-ease);
+  }
+
+  /* Expanded state toggled by JS adding .nav-open to <header> */
+  header.nav-open nav {
+    max-height: 420px;
+  }
+
+  /* Vertical link list */
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 0 14px;
+    border-top: 1px solid rgba(228,177,74,.2);
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 11px 0;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    border-bottom: 1px solid rgba(228,177,74,.1);
+    /* Reset desktop bottom-border indicator */
+    border-bottom-width: 1px;
+    color: rgba(244,236,216,.7);
+  }
+
+  nav ul li:last-child a {
+    border-bottom: none;
+  }
+
+  /* Active link: left gold bar instead of bottom underline on mobile */
+  nav ul li.active a {
+    color: var(--tga-gold-bright);
+    border-bottom-color: rgba(228,177,74,.1);
+    padding-left: 12px;
+    box-shadow: -3px 0 0 var(--tga-gold) inset;
+  }
+
+  nav ul li a:hover {
+    color: var(--tga-gold-bright);
+    padding-left: 8px;
+  }
+}
+
+/* ── Responsive — small phones (≤ 480px) ──────────────────────────────────── */
+@media (max-width: 480px) {
+  .brand-sub {
+    display: none;
+  }
+
+  .brand-name {
+    font-size: 13px;
+  }
+
+  main {
+    padding: var(--tga-s-5) var(--tga-gutter);
+  }
+
+  .page-heading h2 {
+    font-size: var(--tga-fs-xl);
+  }
+  #factions {
+    grid-template-columns: 1fr;
+  }
 }
