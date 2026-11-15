@@ -67,12 +67,19 @@ h1 {
 }
 /*---------------------------Footer Style----------------------------*/
 footer {
-    background-color: #000000;
-    text-align: center;
-    color: #ffffff;
-    padding: 5px;
+    background-color: var(--tga-ink);
+    border-top: 1px solid var(--tga-gold);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: var(--tga-text);
+    padding: 0 var(--tga-gutter);
     bottom: 0;
 
+}
+
+footer p {
+    font-style:italic
 }
 
 .brand {
