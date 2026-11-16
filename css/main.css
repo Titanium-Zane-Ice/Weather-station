@@ -20,22 +20,54 @@
   --tga-text-invert:       #F4ECD8;
   --tga-text-invert-soft:  #BDB098;
 
+    /* Type scale */
+  --tga-fs-xs:   0.72rem;
+  --tga-fs-sm:   0.85rem;
+  --tga-fs-base: 1rem;
+  --tga-fs-md:   1.15rem;
+  --tga-fs-lg:   1.45rem;
+  --tga-fs-xl:   2rem;
+  --tga-fs-2xl:  2.75rem;
+  --tga-fs-3xl:  3.75rem;
+
+  --tga-track-display: 0.08em;
+  --tga-track-meta:    0.18em;
+
+
   /* Rules / borders */
   --tga-rule:        #D4C5A0;
   --tga-rule-soft:   #E5D9B7;
   --tga-rule-ink:    #3D324F;
   /* Bronze — utility borders, frames */
   --tga-bronze:      #8A5A3A;
+
   /* Spacing */
   --tga-s-1: 4px;  --tga-s-2: 8px;  --tga-s-3: 12px; --tga-s-4: 16px;
   --tga-s-5: 24px; --tga-s-6: 32px; --tga-s-7: 48px; --tga-s-8: 64px;
   --tga-gutter: clamp(20px, 6vw, 80px);
+
+  /* Typography */
+  --tga-font-display: 'Cinzel', 'Trajan Pro', serif;
+  --tga-font-script:  'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+  --tga-font-body:    'Inter', system-ui, -apple-system, sans-serif;
+  --tga-font-mono:    'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
 
   /* Shadows */
   --tga-shadow-card: 0 1px 0 #fff inset, 0 1px 2px rgba(26,20,16,.08), 0 8px 24px -8px rgba(26,20,16,.22);
   --tga-shadow-lift: 0 1px 0 #fff inset, 0 2px 4px rgba(26,20,16,.10), 0 18px 40px -10px rgba(26,20,16,.30);
   --tga-shadow-deep: 0 20px 60px -10px rgba(14,10,6,.55);
   --tga-shadow-glow-gold: 0 0 0 1px rgba(184,134,42,.25), 0 12px 36px -10px rgba(184,134,42,.45);
+
+   /* Gradients */
+  --tga-cosmic:      radial-gradient(ellipse at 30% 20%, #3a2c5a 0%, #1d1430 45%, #0b0a18 100%);
+  --tga-paper-grain: radial-gradient(rgba(138,90,58,.05) 1px, transparent 1px);
+
+  /* Motion */
+  --tga-ease:      cubic-bezier(0.22, 0.61, 0.36, 1);
+  --tga-ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --tga-dur-fast:  160ms;
+  --tga-dur-base:  280ms;
+  --tga-dur-slow:  480ms;
 }
 /*---------------------------Main Style----------------------------*/
 body {
@@ -62,9 +94,12 @@ h1, h2, h3, h4 {
   line-height: 1.1;
   letter-spacing: var(--tga-track-display);
 }
-h1 {
-    font-size: 40px;
-}
+h1 { font-size: var(--tga-fs-2xl); font-weight: 900; }
+h2 { font-size: var(--tga-fs-xl); }
+h3 { font-size: var(--tga-fs-lg); }
+h4 { font-size: var(--tga-fs-md); }
+
+p { margin: 0 0 var(--tga-s-3); }
 /*---------------------------Footer Style----------------------------*/
 footer {
     background-color: var(--tga-ink);
@@ -75,6 +110,7 @@ footer {
     color: var(--tga-text);
     padding: 0 var(--tga-gutter);
     bottom: 0;
+    height: 64px;
 
 }
 
