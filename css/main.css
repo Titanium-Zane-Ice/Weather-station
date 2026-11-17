@@ -293,3 +293,58 @@ header.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-9px) rota
     grid-template-columns: 1fr;
   }
 }
+
+/*---------------------------Info Cards----------------------------*/
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.card {
+    width: 220px;
+    min-height: 150px;
+    padding: 20px;
+    border-radius: 20px;
+    background: linear-gradient(
+        135deg,
+        #00134d,
+        #002b80,
+        #3156c6
+    );
+    border: 1px solid #d4af37;
+    background-size: 300% 300%;
+    color: white;
+    border-radius: 18px;
+    transition: all 0.25s ease;
+    animation: flow 8s ease infinite;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+@keyframes flow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 90%;
+    }
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+}
+.card-header {
+    background: rgba(212, 175, 55, 0.15);
+    border-bottom: 1px solid #d4af37;
+    padding: 5px;
+    color: #ffd700;
+    font-weight: bold;
+}
+.card-content {
+    color: white;
+    font-size: 1.25rem;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+}
