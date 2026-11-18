@@ -5,3 +5,6 @@ L.tileLayer(
         attribution: '&copy; OpenStreetMap'
     }
 ).addTo(map);
+
+fetch("https://api.rainviewer.com/public/weather-maps.json")
+    .then(response =>response.json())

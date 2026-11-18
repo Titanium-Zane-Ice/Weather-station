@@ -8,15 +8,6 @@
     <link rel="icon" href="image/Logo.png">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 </head>
-<script src="https://unpkg.com/leaflet/dist/leaflet.js">
-const map = L.map('map').setView([41.38, 2.17], 8);
-
-L.tileLayer(
-    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap'
-    }
-).addTo(map);
-</script>
 <body>
 <header>
     <div class="brand">
@@ -26,17 +17,19 @@ L.tileLayer(
      <nav>
             <ul>
                 <li class="menu"><a href="index.html">Home</a></li>
-                <li class="menu"><a href="rain.html">Rain</a></li>               
+                <li class="active menu"><a href="rain.html">Rain</a></li>               
             </ul>
         </nav>
         <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
             <span></span><span></span><span></span>
         </button>
-    </header>
+</header>
 <div class="page-heading">
     <h2 style="text-align: center;">Live Rain Tracker</h2>
 </div>
 <div id="map"></div>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="JS/map.js"></script>
 <footer>
     <p><em>&copy; 2026 Weather Station App. All rights reserved to Titanium Creations, LayerNovalabs and angelgibbers.</em></p>
 </footer>

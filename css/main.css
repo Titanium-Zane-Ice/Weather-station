@@ -355,7 +355,7 @@ header.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-9px) rota
 
 /*---------------------------Rain Tracker----------------------------*/
 #map {
-    height: 600px;
+    height: 500px;
     width: 100%;
     border-radius: 20px;
     overflow: hidden;
