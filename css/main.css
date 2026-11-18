@@ -359,5 +359,5 @@ header.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-9px) rota
     width: 100%;
     border-radius: 20px;
     overflow: hidden;
-    border: 1px solid #d4af37;
+    border: 2px solid #d4af37;
 }
