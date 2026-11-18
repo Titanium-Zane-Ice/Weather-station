@@ -343,6 +343,7 @@ header.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-9px) rota
     padding: 5px;
     color: #ffd700;
     font-weight: bold;
+    border-radius: 10px;
 }
 .card-content {
     color: white;
@@ -350,4 +351,13 @@ header.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-9px) rota
     padding: 20px;
     justify-content: center;
     text-align: center;
+}
+
+/*---------------------------Rain Tracker----------------------------*/
+#map {
+    height: 600px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #d4af37;
 }
