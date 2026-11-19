@@ -112,6 +112,7 @@ footer {
     padding: 0 var(--tga-gutter);
     bottom: 0;
     height: 64px;
+    position: bottom;
 
 }
 

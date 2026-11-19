@@ -9,9 +9,10 @@ L.tileLayer(
 fetch("https://api.rainviewer.com/public/weather-maps.json")
     .then(response =>response.json())
     .then(data => {
-        const radarInfo = data.radar.past[radar.data.past.length - 1];
+        const radarInfo =
+            data.radar.past[radar.data.past.length - 1];
 
-        L.tileLayer('https://tilecache.rainviewer.com${latestFrame.path}/256/{z}/{x}/{y}/2/1_1.png', {
+        L.tileLayer(`https://tilecache.rainviewer.com${radarInfo.path}/256/{z}/{x}/{y}/2/1_1.png`, {
             opacity: 0.6
         }).addTo(map);
 });

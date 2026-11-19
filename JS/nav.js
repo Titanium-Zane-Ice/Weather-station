@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     var btn = document.querySelector('.nav-toggle');
-    var header = querySelector('header');
+    var header = document.querySelector('header');
     if (!btn || !header) return;
 
     btn.addEventListener('click', function() {
