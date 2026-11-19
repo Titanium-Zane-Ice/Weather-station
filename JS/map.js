@@ -14,4 +14,4 @@ fetch("https://api.rainviewer.com/public/weather-maps.json")
         L.tileLayer('https://tilecache.rainviewer.com${latestFrame.path}/256/{z}/{x}/{y}/2/1_1.png', {
             opacity: 0.6
         }).addTo(map);
-    });
+});
